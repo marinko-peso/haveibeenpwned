@@ -22,5 +22,5 @@ from .__about__ import *
 
 
 __all__ = [
-    'pwned'
+    'status'
 ]

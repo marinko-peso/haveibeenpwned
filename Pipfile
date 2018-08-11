@@ -4,8 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
+setuptools = "*"
+twine = "*"
+codecov = "*"
+coverage = "*"
 
 [packages]
+urllib3 = "*"
 
 [requires]
 python_version = "3.6"
