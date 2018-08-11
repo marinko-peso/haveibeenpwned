@@ -7,6 +7,14 @@ Check if you have an account that has been compromised in a data breach.
 This package uses the awesome website https://haveibeenpwned.com/.
 
 
+## Installation
+
+Available via PyPi.
+```
+pip install haveibeenpwned
+```
+
+
 ## License
 
 MIT.
