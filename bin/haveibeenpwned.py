@@ -2,16 +2,19 @@
 # -*- coding: utf-8 -*-
 
 import os, sys, argparse
-from haveibeenpwned.status import check
+from haveibeenpwned.status import pwned, pwned_full
 from haveibeenpwned import __version__, __summary__
 
 
-def _display_status():
-    print('displaying data here')
+def _display_status(email):
+    if pwned(email):
+        print('This email address has been pwned!')
+    else:
+        print('No problems here! :-)')
 
 
-def _display_status_with_data():
-    print('test')
+def _display_status_with_data(email):
+    print(pwned_full(email))
 
 
 def main():
@@ -19,13 +22,14 @@ def main():
     parser.add_argument('-v', '--version', action='store_true', help='currently installed version')
     parser.add_argument('-r', '--full', action='store_true', help='response will full data not just boolean, if any exists')
     args = parser.parse_args()
+    email = None
     if args.full:
-        _display_status_with_data()
+        _display_status_with_data(email)
     if args.version:
         print(__version__)
         sys.exit(1)
 
-    _display_status()
+    _display_status(email)
 
 
 if __name__ == '__main__':
