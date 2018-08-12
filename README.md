@@ -18,6 +18,12 @@ pip install haveibeenpwned
 ```
 
 
+## Usage
+
+Work in progress.
+
+
+
 ## License
 
 MIT.
