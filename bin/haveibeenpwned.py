@@ -11,10 +11,16 @@ def _display_status(email):
         print('This email address has been pwned!')
     else:
         print('No problems here! :-)')
+        print('More detailed data on: https://haveibeenpwned.com/')
 
 
 def _display_status_with_data(email):
-    print(pwned_full(email))
+    response = pwned_full(email)
+    if not response:
+        print('No problems here! :-)')
+    else:
+        print(response)
+        print('More detailed data on: https://haveibeenpwned.com/')
 
 
 def main():
