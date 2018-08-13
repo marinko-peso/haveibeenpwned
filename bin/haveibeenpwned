@@ -35,7 +35,16 @@ def _display_status_with_data(email):
     if not response:
         _no_problems_msg()
     else:
-        print(response.data)
+        for record in response:
+            print('Work in progress')
+            # "Title"
+            # "Name"
+            # "Domain"
+            # "BreachDate"
+            # "AddedDate"
+            # "ModifiedDate"
+            # "PwnCount"
+            # TODO: decs with url format
 
 
 def main():
