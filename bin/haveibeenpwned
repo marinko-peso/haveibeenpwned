@@ -6,17 +6,34 @@ from haveibeenpwned.status import pwned, pwned_full
 from haveibeenpwned import __version__, __summary__
 
 
+class Style:
+    BOLD = '\033[1m'
+    OK = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    LINK = '\033[94m'
+    END = '\033[0m'
+
+
+def _no_problems_msg():
+    print('%s%sNo problems here! :-)%s' % (Style.BOLD, Style.OK, Style.END))
+
+
+def _copyright():
+    print('More detailed data on: %shttps://haveibeenpwned.com/%s' % (Style.LINK, Style.END))
+
+
 def _display_status(email):
     if pwned(email):
-        print('This email address has been pwned!')
+        print('%s%sThis email address has been pwned! :-(%s' % (Style.BOLD, Style.FAIL, Style.END))
     else:
-        print('No problems here! :-)')
+        _no_problems_msg()
 
 
 def _display_status_with_data(email):
     response = pwned_full(email)
     if not response:
-        print('No problems here! :-)')
+        _no_problems_msg()
     else:
         print(response.data)
 
@@ -37,7 +54,7 @@ def main():
         _display_status_with_data(email)
     else:
         _display_status(email)
-    print('More detailed data on: https://haveibeenpwned.com/')
+    _copyright()
 
 
 if __name__ == '__main__':
