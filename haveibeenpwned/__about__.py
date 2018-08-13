@@ -32,7 +32,7 @@ __all__ = [
 
 __version__ = '0.0.1'
 __title__ = 'haveibeenpwned'
-__summary__ = 'PyPi quick status implementation for the awesome haveibeenpwned service'
+__summary__ = 'PyPi quick status implementation for the awesome haveibeenpwned.com service'
 __url__ = 'https://github.com/marinko-peso/haveibeenpwned/'
 __author__ = 'Marinko Peso'
 __email__ = 'marinko.peso@gmail.com'

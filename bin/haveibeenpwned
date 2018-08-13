@@ -11,7 +11,6 @@ def _display_status(email):
         print('This email address has been pwned!')
     else:
         print('No problems here! :-)')
-        print('More detailed data on: https://haveibeenpwned.com/')
 
 
 def _display_status_with_data(email):
@@ -19,23 +18,26 @@ def _display_status_with_data(email):
     if not response:
         print('No problems here! :-)')
     else:
-        print(response)
-        print('More detailed data on: https://haveibeenpwned.com/')
+        print(response.data)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__summary__)
+    parser.add_argument('email', metavar='email', help='Email address to check against')
     parser.add_argument('-v', '--version', action='store_true', help='currently installed version')
-    parser.add_argument('-r', '--full', action='store_true', help='response will full data not just boolean, if any exists')
+    parser.add_argument('-f', '--full', action='store_true', help='response will full data not just boolean, if any exists')
     args = parser.parse_args()
-    email = None
-    if args.full:
-        _display_status_with_data(email)
+
     if args.version:
         print(__version__)
         sys.exit(1)
 
-    _display_status(email)
+    email = args.email
+    if args.full:
+        _display_status_with_data(email)
+    else:
+        _display_status(email)
+    print('More detailed data on: https://haveibeenpwned.com/')
 
 
 if __name__ == '__main__':

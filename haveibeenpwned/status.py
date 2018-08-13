@@ -2,6 +2,7 @@
 import urllib3
 
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 _pwned_url = 'https://haveibeenpwned.com/api/v2/breachedaccount/'
 _headers = {'user-agent': 'Pwnage-Checker-PyPi-Package'}
 
