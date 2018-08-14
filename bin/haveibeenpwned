@@ -1,9 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os, sys, argparse
+import os, sys, argparse, json
 from haveibeenpwned.status import pwned, pwned_full
 from haveibeenpwned import __version__, __summary__
+
+
+record_types = (
+    'Title',
+    'Name',
+    'Domain',
+    'BreachDate',
+    'AddedDate',
+    'ModifiedDate',
+    'PwnCount'
+    # Description
+)
 
 
 class Style:
@@ -35,16 +47,12 @@ def _display_status_with_data(email):
     if not response:
         _no_problems_msg()
     else:
-        for record in response:
-            print('Work in progress')
-            # "Title"
-            # "Name"
-            # "Domain"
-            # "BreachDate"
-            # "AddedDate"
-            # "ModifiedDate"
-            # "PwnCount"
-            # TODO: decs with url format
+        filtered_response = ''.join([chr(i) for i in response if i <= 128])
+        response_obj = json.loads(filtered_response)
+        for record in response_obj:
+            for type in record_types:
+                print('{}{}: {}{}'.format(Style.WARNING, type, Style.END, record.get(type)))
+            print('--')
 
 
 def main():
