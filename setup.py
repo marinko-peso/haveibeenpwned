@@ -12,11 +12,10 @@ setup(
     license=__license__,
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    keywords='index hr terminal cli news croatia',
+    keywords=__keywords__,
     packages=find_packages(exclude=['tests*']),
     install_requires=[
-        'beautifulsoup4',
-        'six'
+        'urllib3'
     ],
     zip_safe=False,
     scripts=['bin/haveibeenpwned'],

@@ -22,6 +22,7 @@ import datetime
 __all__ = [
     '__title__',
     '__summary__',
+    '__keywords__',
     '__url__',
     '__version__',
     '__author__',
@@ -30,9 +31,10 @@ __all__ = [
     '__copyright__',
 ]
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __title__ = 'haveibeenpwned'
 __summary__ = 'PyPi quick status implementation for the awesome haveibeenpwned.com service'
+__keywords__ = 'haveibeenpwned email breached status security'
 __url__ = 'https://github.com/marinko-peso/haveibeenpwned/'
 __author__ = 'Marinko Peso'
 __email__ = 'marinko.peso@gmail.com'
