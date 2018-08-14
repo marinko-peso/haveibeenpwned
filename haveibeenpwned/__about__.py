@@ -30,7 +30,7 @@ __all__ = [
     '__copyright__',
 ]
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 __title__ = 'haveibeenpwned'
 __summary__ = 'PyPi quick status implementation for the awesome haveibeenpwned.com service'
 __url__ = 'https://github.com/marinko-peso/haveibeenpwned/'
