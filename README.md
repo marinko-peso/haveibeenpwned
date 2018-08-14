@@ -25,9 +25,9 @@ Available as command with format:
 haveibeenpwned here.is@the.email [options]
 ```
 Options:
-```-f``` [--full] get the full response not just status
-```-h``` [--help]
-```-v``` [--version]
+* ```-f``` [--full] get the full response not just status
+* ```-h``` [--help]
+* ```-v``` [--version]
 
 
 
