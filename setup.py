@@ -19,7 +19,7 @@ setup(
         'six'
     ],
     zip_safe=False,
-    scripts=['bin/index-hr'],
+    scripts=['bin/haveibeenpwned'],
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
