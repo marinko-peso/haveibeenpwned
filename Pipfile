@@ -12,6 +12,7 @@ coverage = "*"
 [packages]
 urllib3 = "*"
 chardet = "*"
+six = "*"
 
 [requires]
 python_version = "3.6"

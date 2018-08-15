@@ -15,7 +15,8 @@ setup(
     keywords=__keywords__,
     packages=find_packages(exclude=['tests*']),
     install_requires=[
-        'urllib3'
+        'urllib3',
+        'six'
     ],
     zip_safe=False,
     scripts=['bin/haveibeenpwned'],

@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys, argparse
+from six import string_types
+
 from haveibeenpwned import pwned, pwned_full
 from haveibeenpwned import __version__, __summary__
 
@@ -43,7 +45,7 @@ def _display_status(email):
 
 
 def _fix_encoding_errors(val):
-    if type(val) == str:
+    if isinstance(val, string_types):
         try:
             val.encode('ascii')
             return val
