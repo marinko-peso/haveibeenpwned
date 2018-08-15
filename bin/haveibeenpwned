@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys, argparse
-from haveibeenpwned.status import pwned, pwned_full
+from haveibeenpwned import pwned, pwned_full
 from haveibeenpwned import __version__, __summary__
 
 

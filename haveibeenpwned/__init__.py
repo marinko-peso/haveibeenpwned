@@ -19,8 +19,8 @@
 
 from __future__ import absolute_import
 from .__about__ import *
+from .status import pwned, pwned_full
 
 
 __all__ = [
-    'status'
 ]
