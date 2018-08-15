@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import urllib3
+import urllib3, json
 
 
 # Supress warning about insecure request.
@@ -28,9 +28,15 @@ def pwned(email):
 
 def pwned_full(email):
     """
-    Get back full response.
+    Get back full response decoded from json to dict.
     :param email: {String}
-    :return: {String}
+    :return: {Dict}
     """
     response = _get_response(email)
-    return response.data if response.data else None
+    data = []
+    if response.data:
+        data = json.loads(response.data)
+    return {
+        'status': bool(data),
+        'data': data
+    }
