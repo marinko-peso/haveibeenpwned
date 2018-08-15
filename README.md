@@ -29,6 +29,13 @@ Options:
 * ```-h``` [--help]
 * ```-v``` [--version]
 
+As an import:
+```python
+from haveibeenpwned import pwned
+from haveibeenpwned import pwned_full
+```
+* ```pwned``` returns Boolean
+* ```pwned_full``` returns dict with Boolean status and additional data as a list
 
 
 ## License
