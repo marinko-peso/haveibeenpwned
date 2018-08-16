@@ -68,13 +68,9 @@ def _display_status_with_data(email):
 def main():
     parser = argparse.ArgumentParser(description=__summary__)
     parser.add_argument('email', metavar='email', help='Email address to check against')
-    parser.add_argument('-v', '--version', action='store_true', help='currently installed version')
     parser.add_argument('-f', '--full', action='store_true', help='response will full data not just boolean, if any exists')
+    parser.add_argument('-v', '--version', action='version', version=__version__)
     args = parser.parse_args()
-
-    if args.version:
-        print(__version__)
-        sys.exit(1)
 
     email = args.email
     if args.full:
