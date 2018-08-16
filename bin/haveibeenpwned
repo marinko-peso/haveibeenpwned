@@ -30,16 +30,16 @@ class Style:
 
 
 def _no_problems_msg():
-    print('%s%sNo problems here! :-)%s' % (Style.BOLD, Style.OK, Style.END))
+    print('{}{}No problems here! :-){}'.format(Style.BOLD, Style.OK, Style.END))
 
 
 def _copyright():
-    print('More detailed data on: %shttps://haveibeenpwned.com/%s' % (Style.LINK, Style.END))
+    print('More detailed data on: {}https://haveibeenpwned.com/{}'.format(Style.LINK, Style.END))
 
 
 def _display_status(email):
     if pwned(email):
-        print('%s%sThis email address has been pwned! :-(%s' % (Style.BOLD, Style.FAIL, Style.END))
+        print('{}{}This email address has been PWNED! :-({}'.format(Style.BOLD, Style.FAIL, Style.END))
     else:
         _no_problems_msg()
 
