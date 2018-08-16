@@ -31,7 +31,7 @@ __all__ = [
     '__copyright__',
 ]
 
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 __title__ = 'haveibeenpwned'
 __summary__ = 'PyPi quick status implementation for the awesome haveibeenpwned.com service'
 __keywords__ = 'haveibeenpwned email breached status security'
