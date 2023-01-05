@@ -1,3 +1,6 @@
+# DEPRECATED
+This library is no longer maintained & is not working for the latest version of the api. PR's to resolve this issue are welcome. More information [here](https://github.com/marinko-peso/haveibeenpwned/issues/6).
+
 # Have I Been Pwned?
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![license](https://img.shields.io/github/license/marinko-peso/haveibeenpwned.svg)](https://github.com/marinko-peso/haveibeenpwned/blob/master/LICENSE)
